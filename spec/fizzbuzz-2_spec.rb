@@ -26,4 +26,9 @@ describe "fizzbuzz-2" do
     number = rand(1000)*5
     expect(number.fizzbuzz).to eq "buzz" unless number % 3 == 0
   end
+
+  it 'returns the number for a number that is not divisible by 3 or 5' do
+    number = rand(1000)
+    expect(number.fizzbuzz).to eq number unless number % 3 == 0 || number % 5 == 0
+  end
 end
